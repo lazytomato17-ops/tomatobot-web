@@ -1,0 +1,6 @@
+services:
+  - type: web
+    runtime: static
+    name: tomatobot
+    buildCommand: npm ci && npm run build
+    staticPublishPath: dist
