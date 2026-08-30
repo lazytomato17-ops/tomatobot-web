@@ -142,11 +142,11 @@ export default function App() {
           <p className="section-index">Fair play</p>
           <h3>競争は楽しく、集計は公平に。</h3>
           <ul>
-            <li><span>01</span>ランキングは毎月リセット</li>
-            <li><span>02</span>勝率は5試合完走から掲載</li>
-            <li><span>03</span>ソロと友達戦は完全に分離</li>
-            <li><span>04</span><code>/ranking join</code> で本人が参加</li>
-            <li><span>05</span>テスト用特殊配役は対象外</li>
+            <li><span className="fairness-index">01</span><span className="fairness-copy">ランキングは毎月リセット</span></li>
+            <li><span className="fairness-index">02</span><span className="fairness-copy">勝率は5試合完走から掲載</span></li>
+            <li><span className="fairness-index">03</span><span className="fairness-copy">ソロと友達戦は完全に分離</span></li>
+            <li><span className="fairness-index">04</span><span className="fairness-copy"><code>/ranking join</code> で本人が参加</span></li>
+            <li><span className="fairness-index">05</span><span className="fairness-copy">テスト用特殊配役は対象外</span></li>
           </ul>
           <p className="fairness-note">
             勝敗数と勝率を一緒に見せ、1つの数字だけで強さを決めません。
