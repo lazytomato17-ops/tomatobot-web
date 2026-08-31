@@ -186,7 +186,7 @@ export default function App() {
             <div className="shot-window">
               <img
                 src="/screenshots/01-game-start.png"
-                alt="7人村のゲーム開始と役職構成が表示されたDiscord画面"
+                alt="9人村のゲーム開始と役職構成が表示されたDiscord画面"
                 loading="lazy"
               />
             </div>
