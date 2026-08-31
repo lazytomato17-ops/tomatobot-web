@@ -170,6 +170,51 @@ export default function App() {
         </div>
       </section>
 
+      <section className="play-preview" aria-labelledby="play-preview-title">
+        <div className="section-heading">
+          <p className="section-index">03 / Real play</p>
+          <div>
+            <h2 id="play-preview-title">Discordの中で、<br />本当にこう動く。</h2>
+            <p className="section-lead">
+              実際の1人プレイから切り出した画面です。開始から議論、決着まで、
+              チャンネルを移動せずに遊べます。
+            </p>
+          </div>
+        </div>
+        <div className="gameplay-grid">
+          <figure>
+            <div className="shot-window">
+              <img
+                src="/screenshots/01-game-start.png"
+                alt="7人村のゲーム開始と役職構成が表示されたDiscord画面"
+                loading="lazy"
+              />
+            </div>
+            <figcaption><span>01</span><strong>配役が届いたら、すぐ開始</strong></figcaption>
+          </figure>
+          <figure>
+            <div className="shot-window">
+              <img
+                src="/screenshots/02-discussion-co.png"
+                alt="NPCが占い師COを行い、互いを疑って議論するDiscord画面"
+                loading="lazy"
+              />
+            </div>
+            <figcaption><span>02</span><strong>NPCもCOし、意見を出す</strong></figcaption>
+          </figure>
+          <figure>
+            <div className="shot-window">
+              <img
+                src="/screenshots/03-game-result.png"
+                alt="人狼陣営の勝利と生存役職が表示されたDiscord画面"
+                loading="lazy"
+              />
+            </div>
+            <figcaption><span>03</span><strong>投票から勝敗まで自動進行</strong></figcaption>
+          </figure>
+        </div>
+      </section>
+
       <section className="roles-section" aria-label="役職一覧">
         <div className="roles-heading">
           <p className="section-index">Basic roles</p>
@@ -186,7 +231,7 @@ export default function App() {
       </section>
 
       <section className="how-to" id="how-to-play" aria-label="遊び方">
-        <p className="section-index">03 / Quick start</p>
+        <p className="section-index">04 / Quick start</p>
         <ol>
           <li><span>01</span>Botをサーバーへ追加</li>
           <li><span>02</span><code>/jinro</code> を入力</li>

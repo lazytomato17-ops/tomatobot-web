@@ -284,6 +284,7 @@ nav a:not(.nav-cta):hover { color: white; }
 .fairness-note { margin: 24px 0 0; padding: 16px; border-left: 2px solid var(--accent); background: rgba(123, 131, 255, 0.055); color: #8f96a8; font-size: 11px; line-height: 1.8; }
 
 .features-section,
+.play-preview,
 .roles-section,
 .final-cta,
 footer {
@@ -309,6 +310,21 @@ footer {
 .feature-grid article > span { color: #686f81; font: 700 10px/1 ui-monospace, monospace; }
 .feature-grid h3 { margin-top: 68px; font-size: 20px; }
 .feature-grid p { margin: 16px 0 0; color: var(--muted); font-size: 13px; line-height: 1.85; }
+
+.play-preview {
+  padding: 110px 0;
+  border-top: 1px solid var(--line);
+}
+
+.play-preview .section-heading h2 { margin: 0; font-size: clamp(34px, 4.5vw, 58px); line-height: 1.14; letter-spacing: -0.055em; }
+.section-lead { max-width: 660px; margin: 24px 0 0; color: var(--muted); font-size: 14px; line-height: 1.9; }
+.gameplay-grid { display: grid; margin-top: 58px; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.gameplay-grid figure { overflow: hidden; margin: 0; border: 1px solid var(--line); border-radius: 18px; background: rgba(17, 21, 33, 0.72); }
+.shot-window { display: grid; min-height: 280px; padding: 22px; place-items: center; background: radial-gradient(circle at 50% 30%, rgba(123, 131, 255, 0.09), transparent 65%), #0b0d14; }
+.shot-window img { display: block; width: 100%; max-height: 235px; object-fit: contain; border-radius: 9px; box-shadow: 0 18px 45px rgba(0, 0, 0, 0.42); }
+.gameplay-grid figcaption { display: grid; min-height: 76px; padding: 18px 20px; grid-template-columns: 30px 1fr; align-items: center; gap: 12px; border-top: 1px solid var(--line); }
+.gameplay-grid figcaption span { color: #656c7e; font: 700 10px/1 ui-monospace, monospace; }
+.gameplay-grid figcaption strong { font-size: 13px; line-height: 1.6; }
 
 .roles-section {
   display: grid;
@@ -364,11 +380,13 @@ footer > a:last-child { color: #b9becb; font-weight: 700; }
   .feature-grid { grid-template-columns: 1fr; }
   .feature-grid article { min-height: 190px; }
   .feature-grid h3 { margin-top: 42px; }
+  .gameplay-grid { grid-template-columns: 1fr; }
+  .shot-window { min-height: 250px; }
   .roles-section { padding: 48px 36px; grid-template-columns: 1fr; gap: 40px; }
 }
 
 @media (max-width: 560px) {
-  .site-header, .hero, .ranking-intro, .ranking-stage, .features-section, .roles-section, .how-to, .final-cta, footer { width: min(100% - 28px, 1180px); }
+  .site-header, .hero, .ranking-intro, .ranking-stage, .features-section, .play-preview, .roles-section, .how-to, .final-cta, footer { width: min(100% - 28px, 1180px); }
   .site-header { min-height: 70px; }
   .brand { font-size: 15px; }
   .nav-cta { padding: 9px 12px; }
@@ -389,7 +407,10 @@ footer > a:last-child { color: #b9becb; font-weight: 700; }
   .list-record { display: none; }
   .fairness-panel { padding: 26px 22px; }
   .features-section { padding: 76px 0; }
+  .play-preview { padding: 76px 0; }
   .feature-grid { margin-top: 42px; }
+  .gameplay-grid { margin-top: 42px; }
+  .shot-window { min-height: 220px; padding: 16px; }
   .roles-section { padding: 34px 22px; border-radius: 18px; }
   .role-list { grid-template-columns: 1fr; }
   .how-to ol { grid-template-columns: 1fr; }
