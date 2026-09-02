@@ -244,10 +244,16 @@ nav a:not(.nav-cta):hover { color: white; }
   display: grid;
   min-height: 150px;
   grid-template-columns: 1fr;
+  align-content: center;
   place-items: center;
+  gap: 9px;
+  text-align: center;
   color: #777e90;
   font-size: 12px;
 }
+
+.empty-ranking strong { color: #dfe2eb; font-size: 14px; }
+.empty-ranking span { max-width: 390px; line-height: 1.7; }
 
 .place { color: #737a8e; font: 800 12px/1 ui-monospace, monospace; }
 .place-1 { color: #ffd672; }

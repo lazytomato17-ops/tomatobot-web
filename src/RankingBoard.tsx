@@ -63,6 +63,7 @@ export function RankingBoard() {
       try {
         const response = await fetch(rankingApiUrl, {
           signal: controller.signal,
+          cache: "no-store",
         });
         if (!response.ok) throw new Error("ranking API is unavailable");
         const payload = (await response.json()) as RankingPayload;
@@ -139,14 +140,18 @@ export function RankingBoard() {
         ))}
         {entries.length === 0 ? (
           <li className="empty-ranking">
-            まだ掲載対象のプレイヤーはいません。
+            <strong>{season}のランキングは集計中です</strong>
+            <span>
+              参加設定は保存されたままです。今月{minimumGames}
+              試合を完走すると自動で掲載されます。
+            </span>
           </li>
         ) : null}
       </ol>
 
       <p className="sample-note">
         {source === "live"
-          ? `/ranking join で参加し、今月${minimumGames}試合を完走したプレイヤーだけを掲載しています。`
+          ? `参加設定後、今月${minimumGames}試合を完走すると掲載されます。試合数は毎月1日にリセットされます。`
           : source === "loading"
             ? "実データを読み込んでいます。"
             : "現在は表示サンプルです。ランキング公開後は参加に同意したプレイヤーだけを掲載します。"}
